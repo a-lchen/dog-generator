@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <link type="text/css" href="index.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="body-content">
+      <div class="title">Dog Generator</div>
+      <div id="image" class="image"></div>
+      <input class="dog-input" id="dogname" />
+      <div class="button-container">
+        <div class="button submit" onclick="getImage()">
+          find dog!
+        </div>
+        <div class="button random" onclick="getRandomImage()">
+          random dog
+        </div>
+      </div>
+      <div class="error-text" id="error">
+        Woof woof, we couldn’t find that dog! Please try again.
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="index.js"></script>

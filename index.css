@@ -1,0 +1,68 @@
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.body-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.title {
+  font-size: 50px;
+  letter-spacing: 7px;
+}
+
+.image {
+  width: 400px;
+  height: 400px;
+  border-radius: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.dog-input {
+  width: 50%;
+  font-size: 24px;
+  outline: none;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  padding: 10px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+}
+
+.button-container {
+  margin-top: 15px;
+  display: flex;
+}
+
+.button {
+  width: 180px;
+  border-radius: 40px;
+  margin: 15px;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #a8efff;
+}
+
+.random {
+  background-color: #eea8ff;
+}
+
+.error-text {
+  color: #ff7878;
+  font-size: 24px;
+  margin-top: 35px;
+  visibility: hidden;
+}

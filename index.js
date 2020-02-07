@@ -6,12 +6,11 @@ function getImage() {
     })
     .then(function(res) {
       if (res.code == 404) {
-        document.querySelector("#error").style.visibility = "visible";
+        alert("Woof woof, we couldn't find that dog! Please try again.");
       } else {
         document.querySelector(
           "#image"
         ).style.backgroundImage = `url(${res.message})`;
-        document.querySelector("#error").style.visibility = "hidden";
       }
     });
 }
@@ -25,6 +24,5 @@ function getRandomImage() {
       document.querySelector(
         "#image"
       ).style.backgroundImage = `url(${res.message})`;
-      document.querySelector("#error").style.visibility = "hidden";
     });
 }

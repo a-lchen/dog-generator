@@ -60,10 +60,3 @@ body {
 .random {
   background-color: #eea8ff;
 }
-
-.error-text {
-  color: #ff7878;
-  font-size: 24px;
-  margin-top: 35px;
-  visibility: hidden;
-}

@@ -1,3 +1,11 @@
+document.querySelector("#dogname").addEventListener("keydown", onKeyPress);
+
+function onKeyPress(event) {
+  if (event.key === "Enter") {
+    getImage();
+  }
+}
+
 function getImage() {
   const name = document.querySelector("#dogname").value;
   fetch(`https://dog.ceo/api/breed/${name}/images/random`)

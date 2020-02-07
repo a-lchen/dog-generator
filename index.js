@@ -1,12 +1,3 @@
-document
-  .querySelector("#image")
-  .addEventListener("animationend", resetAnimation);
-
-function resetAnimation() {
-  document.querySelector("#image").classList.remove("animated");
-  document.querySelector("#image").classList.remove("fadeIn");
-}
-
 function getImage() {
   const name = document.querySelector("#dogname").value;
   fetch(`https://dog.ceo/api/breed/${name}/images/random`)
@@ -20,9 +11,6 @@ function getImage() {
         document.querySelector(
           "#image"
         ).style.backgroundImage = `url(${res.message})`;
-        document.querySelector("#image").classList.add("animated");
-        document.querySelector("#image").classList.add("fadeIn");
-        document.querySelector("#image").classList.add("delay-1s");
         document.querySelector("#error").style.visibility = "hidden";
       }
     });
@@ -37,9 +25,6 @@ function getRandomImage() {
       document.querySelector(
         "#image"
       ).style.backgroundImage = `url(${res.message})`;
-      document.querySelector("#image").classList.add("animated");
-      document.querySelector("#image").classList.add("fadeIn");
-      document.querySelector("#image").classList.add("delay-1s");
       document.querySelector("#error").style.visibility = "hidden";
     });
 }

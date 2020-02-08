@@ -1,4 +1,4 @@
-document.querySelector("#dogname").addEventListener("keydown", onKeyPress);
+document.querySelector("#dog-name").addEventListener("keydown", onKeyPress);
 
 function onKeyPress(event) {
   if (event.key === "Enter") {
@@ -6,17 +6,15 @@ function onKeyPress(event) {
   }
 }
 
-function getImage() {
-  const name = document.querySelector("#dogname").value;
+function getSpecificImage() {
+  const name = document.querySelector("#dog-name").value;
   fetch(`https://dog.ceo/api/breed/${name}/images/random`)
     .then((res) => res.json())
     .then(function(res) {
-      if (res.code == 404) {
+      if (res.status === "error") {
         alert("Woof woof, we couldn't find that dog! Please try again.");
       } else {
-        document.querySelector(
-          "#image"
-        ).style.backgroundImage = `url(${res.message})`;
+        document.querySelector("#dog-image").style.backgroundImage = `url(${res.message})`;
       }
     });
 }
@@ -25,8 +23,6 @@ function getRandomImage() {
   fetch("https://dog.ceo/api/breeds/image/random")
     .then((res) => res.json())
     .then(function(res) {
-      document.querySelector(
-        "#image"
-      ).style.backgroundImage = `url(${res.message})`;
+      document.querySelector("#dog-image").style.backgroundImage = `url(${res.message})`;
     });
 }

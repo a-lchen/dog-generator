@@ -1,12 +1,12 @@
-function getImage() {
-  const name = document.querySelector("#dogname").value;
+function getSpecificImage() {
+  const name = document.querySelector("#dog-name").value;
   fetch(`https://dog.ceo/api/breed/${name}/images/random`)
     .then((res) => res.json())
     .then(function(res) {
-      if (res.code == 404) {
+      if (res.status === "error") {
         alert("Woof woof, we couldn't find that dog! Please try again.");
       } else {
-        document.querySelector("#image").src = res.message;
+        document.querySelector("#dog-image").src = res.message;
       }
     });
 }
@@ -15,6 +15,6 @@ function getRandomImage() {
   fetch("https://dog.ceo/api/breeds/image/random")
     .then((res) => res.json())
     .then(function(res) {
-      document.querySelector("#image").src = res.message;
+      document.querySelector("#dog-image").src = res.message;
     });
 }

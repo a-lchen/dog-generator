@@ -2,7 +2,7 @@ document.querySelector("#dog-name").addEventListener("keydown", onKeyPress);
 
 function onKeyPress(event) {
   if (event.key === "Enter") {
-    getImage();
+    getSpecificImage();
   }
 }
 
